@@ -206,7 +206,7 @@ For this project, Shodan can be used to:
 
 The following screenshot shows the Shodan search results for the `apache` query.
 
-![Shodan Apache Search](screenshots/shodan-apache-search.png)
+![Shodan Apache Search](screenshots/shodan-apache-search.jpg)
 ## 6. VirusTotal
 
 VirusTotal is a service that provides analysis and intelligence related to files, URLs, domains, and IP addresses.
