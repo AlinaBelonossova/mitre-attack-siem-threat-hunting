@@ -243,7 +243,87 @@ Information from VirusTotal should be interpreted carefully because detection re
 A detection result alone should not automatically be treated as proof of malicious activity.
 
 ---
+### 6.1 Practical VirusTotal Analysis
 
+A domain analysis was performed using VirusTotal with the query:
+
+`google.com`
+
+The analysis was used to examine how VirusTotal can provide threat intelligence and contextual information for a domain.
+
+The observed information included security vendor detections, domain categories, DNS records, passive DNS information, subdomains, and related infrastructure.
+
+### 6.2 Detection Results
+
+The VirusTotal Detection page showed that 2 out of 89 security vendors flagged the domain during the observed analysis.
+
+This result was treated as an observation rather than definitive evidence that the domain is malicious. Different security vendors may produce different classifications, so individual detections require additional validation and contextual analysis.
+
+### 6.3 IOC Enrichment
+
+The Details page provided additional information including:
+
+- Domain categories
+- Popularity information
+- DNS records
+- A records
+- IP addresses
+- Registrar information
+- Domain metadata
+
+The Relations page provided additional infrastructure context, including:
+
+- Passive DNS resolutions
+- Resolvers
+- Historical IP addresses
+- Subdomains
+- Subdomain-to-IP relationships
+
+This demonstrates how VirusTotal can be used to enrich a domain-based indicator with additional technical context.
+
+### 6.4 Relevance to the Project
+
+For the MITRE ATT&CK-Based SIEM Threat Hunting and Detection project, VirusTotal can support the following workflow:
+
+Domain or IP Indicator
+        ↓
+VirusTotal Enrichment
+        ↓
+DNS and Infrastructure Information
+        ↓
+IOC Context
+        ↓
+Threat Hunting Hypothesis
+        ↓
+SIEM Correlation
+        ↓
+MITRE ATT&CK Mapping
+
+The enriched information can provide additional context before an indicator is correlated with internal security events.
+
+### 6.5 Limitations
+
+VirusTotal results should not be treated as a standalone determination of malicious activity.
+
+Detection results can differ between security vendors, and relationships between domains, IP addresses, and files require contextual validation.
+
+For this reason, VirusTotal information should be combined with other intelligence sources and internal security telemetry.
+
+### 6.6 Evidence
+
+#### Detection
+
+![VirusTotal Domain Detection](screenshots/virustotal-google-domain.jpg)
+
+#### Domain Details
+
+![VirusTotal Domain Details](screenshots/virustotal-google-details.jpg)
+
+#### Relations
+
+![VirusTotal Domain Relations](screenshots/virustotal-google-relations-1.jpg)
+
+![VirusTotal Domain Relations](screenshots/virustotal-google-relations-2.jpg)
 ## 7. Maltego
 
 Maltego is an investigation and link-analysis platform that can be used to identify relationships between different entities.
