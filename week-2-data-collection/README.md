@@ -338,33 +338,71 @@ Examples of entities include:
 - Email addresses
 - Infrastructure
 
-### Project Relevance
+### 7.1 Practical Maltego Analysis
 
-Maltego can help visualize relationships between indicators and infrastructure.
+A practical Maltego analysis was performed using the domain:
 
-This can support threat intelligence investigations by allowing analysts to move from one known indicator to related entities.
+`google.com`
 
-A simplified investigation process is:
+The domain was added as a Domain entity in a Maltego graph.
 
-    Known Indicator
-          |
-          v
-    Entity Discovery
-          |
-          v
-    Relationship Analysis
-          |
-          v
-    Related Infrastructure
-          |
-          v
-    Threat Intelligence Context
+A DNS infrastructure transform was then executed using:
 
-### Limitations
+**Perform MX Lookup**
+
+The transform returned an MX record associated with the domain, showing a mail server entity related to `google.com`.
+
+This demonstrates how Maltego can be used to discover relationships between a domain and its associated DNS infrastructure.
+
+### 7.2 Observed Results
+
+The Maltego graph contained:
+
+- The original Domain entity: `google.com`
+- An MX Record entity
+- A relationship between the domain and the MX record
+- A mail server associated with the MX record
+
+The resulting graph can be represented as:
+
+    google.com
+         |
+         v
+      MX Record
+         |
+         v
+    smtp.google...
+
+The result demonstrates a basic relationship-mapping workflow using publicly available DNS information.
+
+### 7.3 Relevance to Threat Intelligence
+
+Maltego can support Cyber Threat Intelligence by helping analysts visualize relationships between indicators and infrastructure.
+
+For this project, the workflow can be used to:
+
+1. Start with a known domain or other indicator.
+2. Identify related infrastructure.
+3. Visualize relationships between entities.
+4. Enrich threat intelligence information.
+5. Develop hypotheses for further investigation.
+6. Provide additional context for SIEM-based threat hunting.
+
+The Maltego results can therefore complement the infrastructure information collected using Shodan and the indicator enrichment performed using VirusTotal.
+
+### 7.4 Limitations
 
 The quality of the investigation depends on the available data sources and the accuracy of the relationships returned by the platform.
 
-Relationships should therefore be validated before being treated as evidence.
+The observed MX relationship provides infrastructure context, but it does not by itself indicate malicious activity.
+
+Relationships should therefore be validated before being treated as security evidence.
+
+### 7.5 Evidence
+
+The following screenshot shows the Maltego graph after performing an MX lookup for `google.com`.
+
+![Maltego Google MX Lookup](screenshots/maltego-google-mx.jpg)
 
 ---
 
@@ -386,9 +424,9 @@ A data source mapping identifies which sources can provide useful information fo
 
 | Data Source | Source Type | Data Type | Collection Purpose | Project Use |
 |---|---|---|---|---|
-| Shodan | Open Source | IPs, ports, services | External reconnaissance | Infrastructure analysis |
-| VirusTotal | Open Source | Hashes, URLs, domains, IPs | IOC enrichment | Indicator investigation |
-| Maltego | Open Source | Entity relationships | Link analysis | Infrastructure investigation |
+| Shodan | Open Source | IPs, ports, services, banners | External infrastructure discovery | Infrastructure analysis and enrichment |
+| VirusTotal | Open Source | Domains, IPs, hashes, URLs, DNS and relationship data | IOC enrichment and validation | Indicator investigation and threat context |
+| Maltego | Open Source | Domains, DNS records, infrastructure relationships | Relationship analysis | Infrastructure mapping and intelligence enrichment |
 | Public Threat Reports | Open Source | Threat actors, TTPs, IOCs | Threat intelligence | Threat context |
 | Windows Event Logs | Closed Source | Authentication and system events | Internal monitoring | Attack detection |
 | Firewall Logs | Closed Source | Network connections | Network monitoring | Suspicious traffic analysis |
