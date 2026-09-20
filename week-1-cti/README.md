@@ -324,3 +324,62 @@ Cyber Threat Intelligence
             |
             v
    MITRE ATT&CK Mapping
+```
+
+## 8. Relevance to the Project
+
+The Week 1 research establishes the foundation for the overall project.
+
+The project will use Cyber Threat Intelligence (CTI) to:
+
+1. Identify relevant threats.
+2. Understand possible threat sources.
+3. Identify useful indicators and behavioral patterns.
+4. Develop threat hunting hypotheses.
+5. Search security logs for suspicious activity.
+6. Map observed behavior to MITRE ATT&CK.
+7. Develop detection rules.
+
+This creates a connection between Cyber Threat Intelligence and the project's SIEM-based detection workflow.
+
+---
+
+## 9. Preliminary MITRE ATT&CK Connection
+
+MITRE ATT&CK provides a structured way to describe adversary behavior.
+
+The framework distinguishes:
+
+- **Tactics** — why an adversary performs an action.
+- **Techniques** — how an adversary achieves a tactical goal.
+- **Sub-techniques** — more specific descriptions of techniques.
+- **Procedures** — specific implementations or observed uses of techniques.
+
+This project will use ATT&CK later to map observed behavior from SIEM investigations to adversary techniques.
+
+---
+
+## 10. Sources
+
+1. ENISA. *ENISA Threat Landscape 2025*.
+2. SANS Institute. *Glossary of Cyber Security Terms*.
+3. MITRE. *MITRE ATT&CK — Get Started*.
+4. MITRE. *MITRE ATT&CK FAQ*.
+
+The selected sources are related to the Week 1 topics specified in the course syllabus.
+
+---
+
+## 11. Week 1 Conclusion
+
+Week 1 established the basic CTI foundation for the project.
+
+The main outcomes are:
+
+- A glossary of key CTI terms.
+- A classification of major cyber threats.
+- A classification of common threat sources.
+- A preliminary connection between CTI, threat hunting, and SIEM.
+- An initial connection between threat intelligence and MITRE ATT&CK.
+
+The next stage of the project will focus on **Data Collection Process**, including the identification and mapping of relevant threat intelligence and security data sources.
