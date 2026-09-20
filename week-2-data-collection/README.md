@@ -440,34 +440,35 @@ A data source mapping identifies which sources can provide useful information fo
 
 The project will combine external intelligence sources with internal security telemetry.
 
-    External Sources
-          |
-    +-----+-----+-----+
-    |           |     |
-  Shodan   VirusTotal Maltego
-    |           |     |
-    +-----+-----+-----+
-          |
-          v
-    Threat Intelligence
-          |
-          v
-    Indicator Enrichment
-          |
-    +-----+----------------+
-    |                      |
-Internal Logs        Security Events
-    |                      |
-    +----------+-----------+
-               |
-               v
-              SIEM
-               |
-               v
-        Threat Hunting
-               |
-               v
-       MITRE ATT&CK Mapping
+```text
+External Sources
+      |
++-----+-----+-----+
+|           |     |
+Shodan   VirusTotal Maltego
+|           |     |
++-----+-----+-----+
+      |
+      v
+Threat Intelligence
+      |
+      v
+Indicator Enrichment
+      |
++-----+----------------+
+|                      |
+Internal Logs     Security Events
+|                      |
++----------+-----------+
+           |
+           v
+          SIEM
+           |
+           v
+    Threat Hunting
+           |
+           v
+    MITRE ATT&CK Mapping
 
 ---
 
