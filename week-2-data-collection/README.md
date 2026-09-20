@@ -470,6 +470,8 @@ Internal Logs     Security Events
            v
     MITRE ATT&CK Mapping
 
+```
+
 ---
 
 ## 11. Data Source Evaluation
