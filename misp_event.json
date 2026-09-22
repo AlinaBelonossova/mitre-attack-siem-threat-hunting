@@ -1,0 +1,75 @@
+{
+  "Event": {
+    "date": "2026-09-22",
+    "info": "CTI Week 3 - Normalized and Correlated IOC Dataset",
+    "distribution": "0",
+    "threat_level_id": "2",
+    "analysis": "1",
+    "Tag": [
+      {
+        "name": "tlp:amber"
+      },
+      {
+        "name": "course:cti-week3"
+      }
+    ],
+    "Attribute": [
+      {
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "198.51.100.42",
+        "to_ids": true,
+        "comment": "Sources: Shodan; Confidence: 85/100; Sightings: 1; Synthetic lab host with exposed remote service; Tags: osint;network"
+      },
+      {
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "203.0.113.77",
+        "to_ids": true,
+        "comment": "Sources: VirusTotal;Maltego; Confidence: 92/100; Sightings: 2; Synthetic lab infrastructure indicator | Same IP correlated from a second source; Tags: osint;network;correlated"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "value": "example-malicious.com",
+        "to_ids": true,
+        "comment": "Sources: Maltego;Shodan; Confidence: 80/100; Sightings: 2; Synthetic domain discovered during entity mapping | Same domain observed in another source; Tags: osint;domain;correlated"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "value": "https://example-malicious.com/login",
+        "to_ids": true,
+        "comment": "Sources: VirusTotal;Maltego; Confidence: 91/100; Sightings: 2; Synthetic suspicious login URL | Same normalized URL observed in a second source; Tags: url;phishing;correlated"
+      },
+      {
+        "type": "md5",
+        "category": "Payload delivery",
+        "value": "44d88612fea8a8f36de82e1278abb02f",
+        "to_ids": true,
+        "comment": "Sources: VirusTotal; Confidence: 100/100; Sightings: 1; EICAR antivirus test file MD5; Tags: hash;test-file"
+      },
+      {
+        "type": "sha1",
+        "category": "Payload delivery",
+        "value": "3395856ce81f2b7382dee72602f798b642f14140",
+        "to_ids": true,
+        "comment": "Sources: VirusTotal; Confidence: 100/100; Sightings: 1; EICAR antivirus test file SHA-1; Tags: hash;test-file"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "value": "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f",
+        "to_ids": true,
+        "comment": "Sources: VirusTotal; Confidence: 100/100; Sightings: 1; EICAR antivirus test file SHA-256; Tags: hash;test-file"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "value": "http://203.0.113.77/beacon",
+        "to_ids": false,
+        "comment": "Sources: Manual OSINT; Confidence: 67/100; Sightings: 1; Synthetic HTTP beacon path; Tags: c2;network"
+      }
+    ]
+  }
+}

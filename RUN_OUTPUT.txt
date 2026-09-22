@@ -1,0 +1,12 @@
+Week 3 IOC processing complete
+Input records:                14
+Accepted unique indicators:   8
+Correlated duplicate records: 3
+Rejected records:             3
+  - low confidence:           1
+  - invalid:                  2
+
+Normalized CSV: /mnt/data/week3_final_project/output/normalized_iocs.csv
+Rejected CSV:   /mnt/data/week3_final_project/output/rejected_iocs.csv
+MISP event:     /mnt/data/week3_final_project/output/misp_event.json
+Statistics:     /mnt/data/week3_final_project/output/stats.json
