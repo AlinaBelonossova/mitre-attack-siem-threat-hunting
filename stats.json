@@ -1,9 +1,0 @@
-{
-  "input_records": 14,
-  "accepted_unique_indicators": 8,
-  "correlated_duplicate_records": 3,
-  "rejected_records": 3,
-  "rejected_low_confidence": 1,
-  "rejected_invalid": 2,
-  "minimum_confidence": 50
-}

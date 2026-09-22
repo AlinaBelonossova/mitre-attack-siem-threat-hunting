@@ -1,9 +1,0 @@
-indicator,type,misp_type,sources,confidence,sightings_count,description,tags
-198.51.100.42,ip,ip-dst,Shodan,85,1,Synthetic lab host with exposed remote service,osint;network
-203.0.113.77,ip,ip-dst,VirusTotal;Maltego,92,2,Synthetic lab infrastructure indicator | Same IP correlated from a second source,osint;network;correlated
-example-malicious.com,domain,domain,Maltego;Shodan,80,2,Synthetic domain discovered during entity mapping | Same domain observed in another source,osint;domain;correlated
-https://example-malicious.com/login,url,url,VirusTotal;Maltego,91,2,Synthetic suspicious login URL | Same normalized URL observed in a second source,url;phishing;correlated
-44d88612fea8a8f36de82e1278abb02f,md5,md5,VirusTotal,100,1,EICAR antivirus test file MD5,hash;test-file
-3395856ce81f2b7382dee72602f798b642f14140,sha1,sha1,VirusTotal,100,1,EICAR antivirus test file SHA-1,hash;test-file
-275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f,sha256,sha256,VirusTotal,100,1,EICAR antivirus test file SHA-256,hash;test-file
-http://203.0.113.77/beacon,url,url,Manual OSINT,67,1,Synthetic HTTP beacon path,c2;network
