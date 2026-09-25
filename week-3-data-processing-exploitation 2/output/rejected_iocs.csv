@@ -1,0 +1,4 @@
+row,indicator,type,reason
+11,192.0.2.15,ip,low confidence (35 < 50)
+12,not-an-ip,ip-dst,'not-an-ip' does not appear to be an IPv4 or IPv6 address
+13,bad_domain,domain,invalid domain

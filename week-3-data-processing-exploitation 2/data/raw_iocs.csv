@@ -1,0 +1,15 @@
+indicator,type,source,confidence,description,tags
+198.51.100.42,ip-dst,Shodan,85,Synthetic lab host with exposed remote service,osint;network
+203.0.113.77,ipv4,VirusTotal,92,Synthetic lab infrastructure indicator,osint;network
+Example-Malicious.COM,domain,Maltego,80,Synthetic domain discovered during entity mapping,osint;domain
+example-malicious.com.,hostname,Shodan,75,Same domain observed in another source,osint;correlated
+https://Example-Malicious.com/login#tracking,url,VirusTotal,88,Synthetic suspicious login URL,url;phishing
+HTTPS://example-malicious.com:443/login,url,Maltego,91,Same normalized URL observed in a second source,url;correlated
+44d88612fea8a8f36de82e1278abb02f,md5,VirusTotal,100,EICAR antivirus test file MD5,hash;test-file
+3395856ce81f2b7382dee72602f798b642f14140,sha1,VirusTotal,100,EICAR antivirus test file SHA-1,hash;test-file
+275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f,sha256,VirusTotal,100,EICAR antivirus test file SHA-256,hash;test-file
+192.0.2.15,ip,Shodan,35,Low-confidence synthetic observation,osint
+not-an-ip,ip-dst,Manual OSINT,90,Malformed IP used to test validation,invalid
+bad_domain,domain,Manual OSINT,80,Malformed domain used to test validation,invalid
+http://203.0.113.77:80/beacon,url,Manual OSINT,67,Synthetic HTTP beacon path,c2;network
+203.0.113.77,ip-src,Maltego,78,Same IP correlated from a second source,correlated;network
