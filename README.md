@@ -94,6 +94,7 @@ mitre-attack-siem-threat-hunting/
 ├── scripts/
 ├── dashboards/
 └── reports/
+```
 
 ## AI Usage Disclosure
 
