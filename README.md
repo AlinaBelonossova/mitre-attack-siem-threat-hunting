@@ -94,3 +94,18 @@ mitre-attack-siem-threat-hunting/
 ├── scripts/
 ├── dashboards/
 └── reports/
+
+## AI Usage Disclosure
+
+Artificial Intelligence tools were used as an assisting tool during the development of this project.
+
+AI was used for:
+
+- Improving the clarity, grammar, and organization of technical explanations.
+- Explaining cybersecurity concepts, including CTI, OSINT, Cyber Kill Chain, MITRE ATT&CK, SIEM, and threat hunting.
+- Assisting with the interpretation and organization of information collected from official cybersecurity sources.
+- Supporting troubleshooting of development tools, scripts, Git, Docker, and project configuration.
+
+AI was not treated as an authoritative source. Technical information, MITRE ATT&CK mappings, cybersecurity facts, and references were reviewed against official or reliable sources where applicable.
+
+The final project content, tool usage, practical work, evidence, screenshots, and repository organization were reviewed and validated by the project team.
